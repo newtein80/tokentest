@@ -1,0 +1,99 @@
+-- select * from rest.members;
+truncate table rest.members;
+-- select * from rest.salt;
+truncate table rest.salt CASCADE;
+-- select * from rest.social_data;
+truncate table rest.social_data CASCADE;
+
+-- -- INSERT DATA
+-- INSERT INTO rest.t_item_info(item_id, content, create_dt, item_type, title, top_item, views)
+-- 	VALUES
+--     (1, 'content-1', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-1', false, 1),
+--     (2, 'content-2', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-2', false, 2),
+--     (3, 'content-3', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-3', false, 3),
+--     (4, 'content-4', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-4', false, 4),
+--     (5, 'content-5', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-5', false, 5),
+--     (6, 'content-6', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-6', false, 6),
+--     (7, 'content-7', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-7', false, 7),
+--     (8, 'content-8', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-8', false, 8),
+--     (9, 'content-9', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-9', false, 9),
+--     (10, 'content-10', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-10', false, 10),
+--     (11, 'content-11', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-11', false, 11),
+--     (12, 'content-12', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-12', false, 12),
+--     (13, 'content-13', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-13', false, 13),
+--     (14, 'content-14', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-14', false, 14),
+--     (15, 'content-15', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-15', false, 15),
+--     (16, 'content-16', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-16', false, 16),
+--     (17, 'content-17', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-17', false, 17),
+--     (18, 'content-18', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-18', false, 18),
+--     (19, 'content-19', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-19', false, 19),
+--     (20, 'content-20', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-20', false, 20),
+--     (21, 'content-21', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-21', false, 21),
+--     (22, 'content-22', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-22', false, 22),
+--     (23, 'content-23', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-23', false, 23),
+--     (24, 'content-24', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-24', false, 24),
+--     (25, 'content-25', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-25', false, 25),
+--     (26, 'content-26', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-26', false, 26),
+--     (27, 'content-27', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-27', false, 27),
+--     (28, 'content-28', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-28', false, 28),
+--     (29, 'content-29', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-29', false, 29),
+--     (30, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+
+--     (31, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (32, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (33, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (34, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (35, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (36, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (37, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (38, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (39, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (40, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (41, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (42, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (43, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (44, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (45, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (46, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (47, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (48, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (49, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (50, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (51, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (52, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (53, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (54, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (55, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (56, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (57, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (58, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (59, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (60, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (61, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (62, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (63, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (64, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (65, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (66, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (67, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (68, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (69, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (70, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (71, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (72, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30),
+--     (73, 'content-30', TO_TIMESTAMP(TO_CHAR(NOW(),'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS')::TIMESTAMP WITHOUT TIME zone, null, 'title-30', false, 30)
+-- ON CONFLICT(item_id)
+-- DO UPDATE
+-- SET
+--     content = EXCLUDED.content,
+--     create_dt = EXCLUDED.create_dt,
+--     item_type = EXCLUDED.item_type,
+--     title = EXCLUDED.title,
+--     top_item = EXCLUDED.top_item,
+--     views = EXCLUDED.views
+-- ;
+
+-- select * from rest.t_item_info;
+
+
+-- truncate table rest.flyway_schema_history
